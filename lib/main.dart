@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:obsididget/mainDeligater.dart';
+import 'package:obsididget/settings/themeData.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,15 +9,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: APP_THEME_DATA,
       home: const MyHomePage(),
     );
   }
@@ -30,6 +27,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context){
-    return Container();
+    return MainDeligater();
   }
 }
